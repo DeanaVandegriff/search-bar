@@ -1,22 +1,24 @@
-import { NgModule } from '@angular/core';
+
+// imports
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AngularMaterialModule } from 'angular-material.module';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { AppComponent } from './app.component';
-import { HomePageComponent } from './component/home-page/home-page.component';
-import { SearchBarComponent } from './component/search-bar/search-bar.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+// @NgModule decorator with its metadata
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomePageComponent,
-    SearchBarComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
+  declarations: [AppComponent],
+  imports: [BrowserModule,
+    BrowserAnimationsModule,
+    AngularMaterialModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
+
+
